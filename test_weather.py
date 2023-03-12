@@ -1,5 +1,5 @@
 import unittest
-from MainProject import get_weather, format_output
+from main import get_weather, format_output
 
 
 class TestWeatherApp(unittest.TestCase):
