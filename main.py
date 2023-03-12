@@ -38,8 +38,6 @@ def get_weather(city):
             'temperature': temperature,
             'humidity': humidity,
             'wind_speed': wind_speed,
-            'sunrise_time': sunrise_time,
-            'sunset_time': sunset_time
             
         }
 
@@ -60,8 +58,6 @@ def format_output(weather_data):
     temperature = f"{weather_data['temperature']:.2f}°C"
     humidity = f"{weather_data['humidity']}%"
     wind_speed = f"{weather_data['wind_speed']} m/s"
-    sunrise_time = weather_data['sunrise_time']
-    sunset_time = weather_data['sunset_time']
     
  
     return f"Location: {location}\n" \
@@ -69,9 +65,6 @@ def format_output(weather_data):
            f"Temperature: {temperature}\n" \
            f"Humidity: {humidity}\n" \
            f"Wind Speed: {wind_speed}\n" \
-           f"Sunrise: {sunrise_time}\n" \
-           f"Sunset: {sunset_time}"
-
 
 
 def get_city():
