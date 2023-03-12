@@ -13,6 +13,9 @@ class TestWeatherApp(unittest.TestCase):
         self.assertIn('description', weather_data)
         self.assertIn('temperature', weather_data)
         self.assertIn('humidity', weather_data)
+        self.assertIn('wind_speed', weather_data)
+        self.assertIn('sunrise_time', weather_data)
+        self.assertIn('sunset_time', weather_data)
 
     def test_get_weather_invalid_city(self):
         # Test with an invalid city name
@@ -27,12 +30,13 @@ class TestWeatherApp(unittest.TestCase):
             'location': 'London, GB',
             'description': 'Clear',
             'temperature': 15.0,
-            'humidity': 77
+            'humidity': 77        
         }
         expected_output = "Location: London, GB\n" \
                           "Conditions: Clear\n" \
                           "Temperature: 15.00°C\n" \
-                          "Humidity: 77% "
+                          "Humidity: 77%\n"
+        
         output = format_output(weather_data)
         self.assertEqual(output, expected_output)
 
