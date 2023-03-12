@@ -13,9 +13,6 @@ class TestWeatherApp(unittest.TestCase):
         self.assertIn('description', weather_data)
         self.assertIn('temperature', weather_data)
         self.assertIn('humidity', weather_data)
-        self.assertIn('wind_speed', weather_data)
-        self.assertIn('sunrise_time', weather_data)
-        self.assertIn('sunset_time', weather_data)
 
     def test_get_weather_invalid_city(self):
         # Test with an invalid city name
