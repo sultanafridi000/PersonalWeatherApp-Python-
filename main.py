@@ -35,7 +35,8 @@ def get_weather(city):
         return {
             'location': location,
             'description': description,
-            'temperature': temperature
+            'temperature': temperature,
+            'humidy': humidity
         }
 
     except Exception as e:
@@ -53,10 +54,12 @@ def format_output(weather_data):
     location = weather_data['location']
     description = weather_data['description']
     temperature = f"{weather_data['temperature']:.2f}°C"
+    humidity = f"{weather_data['humidity']}%"
 
     return f"Location: {location}\n" \
            f"Conditions: {description}\n" \
            f"Temperature: {temperature}\n" \
+           f"Humidity: {humidity}\n"
 
 
 def get_city():
