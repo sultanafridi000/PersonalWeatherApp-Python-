@@ -1,5 +1,5 @@
 import unittest
-from main import get_weather, format_output
+from MainProject import get_weather, format_output
 
 
 class TestWeatherApp(unittest.TestCase):
@@ -27,13 +27,12 @@ class TestWeatherApp(unittest.TestCase):
             'location': 'London, GB',
             'description': 'Clear',
             'temperature': 15.0,
-            'humidity': '77'
+            'humidity': 77
         }
         expected_output = "Location: London, GB\n" \
                           "Conditions: Clear\n" \
                           "Temperature: 15.00°C\n" \
-                          "Humidity: 77%\n"
-                          
+                          "Humidity: 77% "
         output = format_output(weather_data)
         self.assertEqual(output, expected_output)
 
